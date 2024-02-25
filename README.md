@@ -1,66 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# **Laporan WPL_2024**
+## **1. Basic Routing**
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+a.  route ’/’  <p>
+![Alt text](image-1.png)<p>
+b.  route ’/about’  <p>
+![Alt text](image-2.png)<p>
 
-## About Laravel
+## **2. Route Parameters**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+a.  route /user/{name} <p>
+![Alt text](image-3.png)<p>
+b.  route /user/ tidak akan menampilkan apa-apa  <p>
+![Alt text](image-4.png)<p>
+c. route /posts/{post}/comments/{comment} akan menampilkan 2 parameter yaitu yang pertama parameter "pos ke-1" dan parameter kedua "komentar ke-5"<p> 
+![Alt text](image-5.png)<p>
+d. route /articles/{id} <p> 
+![Alt text](image-6.png)<p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## **3. Optional Parameters**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+a.  Karena function ($name=null) jadi jika kita tidak mengisi parameternya program tetap akan berjalan dengan parameter null/kosong <p>
+![Alt text](image-7.png)<p>
+b.  Langsung menampilkan nama "john" karna kita memasukan namanya di parameter jadi kita ditakperlu mengetik parameternya lagi  <p>
+![Alt text](image-8.png)<p>
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## **4. Controller**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+a.  di route ini kita memanggil controller "WelcomeController" dalam controller itu memanggil fungsi hallo() yang mereturn kalimat "hallo world dunia"<p>
+![Alt text](image-9.png)<p>
+b.  Modifikasi dalam 1 controller <p>
+![Alt text](image-10.png)<p>
+![(Alt text)](image-11.png)<p>
+![Alt text](image-12.png)<p>
+![Alt text](image-13.png)<p>
+![Alt text](image-14.png)<p>
+c.  Modifikasi dalam  Single Action Controller <p>
+![Alt text](image-15.png)<p>
+![Alt text](image-12.png)<p>
+![Alt text](image-13.png)<p>
+![Alt text](image-14.png)<p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## **5. View**
 
-## Laravel Sponsors
+a.  Membuat sebuah pemanggilan fungsi view() berisi nama saya<p>
+![Alt text](image-16.png)<p>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## **6. View dalam direktori**
 
-### Premium Partners
+a. Jika file view berada di dalam direktori lain, maka kita bisa menggunakan “dot” notation untuk mereferensikan direktori tersebut<p>
+![Alt text](image-17.png)<p>
+![Alt text](image-18.png)<p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## **7. Menampilkan view dari controller**
 
-## Contributing
+a. Menampilkan view dari controller, maka router nya diganti langsung memanggil controller yang terdapat view didalamnya<p>
+![Alt text](image-19.png)<p>
+![Alt text](image-20.png)<p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## **8. Meneruskan data ke view**
+a. Untuk meneruskan array data lengkap ke fungsi view, menggunakan metode "with" untuk menambahkan bagian data individual ke view. Metode with mengembalikan instance view objek sehingga kita dapat melanjutkan rangkaian metode sebelum mengembalikan tampilan <P>
 
-## Code of Conduct
+![Alt text](image-21.png)<p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+# **Soal Praktikum**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Jalankan Langkah-langkah Praktikum pada jobsheet di atas. Lakukan sinkronisasi perubahan pada project PWL_2024 ke Github. <P>
+> **Jawab**<p>
+https://github.com/dayutirta/PWL_2024 <p>
+2. Buatlah project baru dengan nama POS. Project ini merupakan sebuah aplikasi Point of 
+Sales yang digunakan untuk membantu penjualan.<P>
+> **Jawab**<p>
+https://github.com/dayutirta/PWL_2024 <p>
+1. Jalankan Langkah-langkah Praktikum pada jobsheet di atas. Lakukan sinkronisasi perubahan pada project PWL_2024 ke Github. <P>
+> **Jawab**<p>
+https://github.com/dayutirta/PWL_2024 <p>
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+----------------------------
+Terima Kasih<p>
+Muhammad Dayutirta Mahara | TI-2F | 2241720210 | Politeknik Negeri Malang<p>
+_______________
