@@ -64,19 +64,6 @@ a. Untuk meneruskan array data lengkap ke fungsi view, menggunakan metode "with"
 ![Alt text](image-21.png)<p>
 
 
-# **Soal Praktikum**
-
-1. Jalankan Langkah-langkah Praktikum pada jobsheet di atas. Lakukan sinkronisasi perubahan pada project PWL_2024 ke Github. <P>
-> **Jawab**<p>
-https://github.com/dayutirta/PWL_2024 <p>
-2. Buatlah project baru dengan nama POS. Project ini merupakan sebuah aplikasi Point of 
-Sales yang digunakan untuk membantu penjualan.<P>
-> **Jawab**<p>
-https://github.com/dayutirta/PWL_2024 <p>
-1. Jalankan Langkah-langkah Praktikum pada jobsheet di atas. Lakukan sinkronisasi perubahan pada project PWL_2024 ke Github. <P>
-> **Jawab**<p>
-https://github.com/dayutirta/PWL_2024 <p>
-
 ----------------------------
 Terima Kasih<p>
 Muhammad Dayutirta Mahara | TI-2F | 2241720210 | Politeknik Negeri Malang<p>
